@@ -35,11 +35,13 @@ h2 {
   height: 2.5em;
   cursor: pointer;
   background-color: rgb(157, 62, 174);
-  border-bottom: 5px solid rgb(110, 43, 123);
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(110, 43, 123);
 }
 h2:hover {
   background-color: rgb(130, 35, 147);
-  border-bottom: 5px solid rgb(80, 16, 96);
+  border-bottom-color: rgb(80, 16, 96);
 }
 p {
   display: none;
@@ -68,7 +70,7 @@ ul li.selected {
 }
 ul li.selected h2 {
   background-color: rgb(104, 72, 180);
-  border-bottom: 5px solid rgb(76, 52, 131);
+  border-bottom-color: rgb(76, 52, 131);
 }
 ul li.selected p {
   display: block;
