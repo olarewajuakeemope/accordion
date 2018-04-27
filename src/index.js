@@ -1,7 +1,7 @@
 import './styles/main.css'
 
 const CONTENT_URL = 'http://design.propcom.co.uk/buildtest/accordion-data.json'
-const oReq = new XMLHttpRequest()
+const xhr = new XMLHttpRequest()
 
 const handleClick = e => {
   const accordion = e.target.parentNode
@@ -16,29 +16,29 @@ const handleClick = e => {
   }
 }
 
+const composeTemplate = ({heading, content}) => (
+  `<h2>
+    ${heading}
+    <span></span>
+   </h2>
+   <p>${content}</p>`
+)
+
 const reqListener = e => {
   const accordionWrapper = document.getElementById('accordion')
   const res = JSON.parse(e.target.response)
+
   res.blocks.forEach(block => {
     const li = document.createElement('li')
-    const span = document.createElement('span')
-    const p = document.createElement('p')
-    const h2 = document.createElement('h2')
-
-    h2.innerText = block.heading
-    p.innerText = block.content
-    li.onclick = handleClick
-
-    h2.appendChild(span)
-    li.appendChild(h2)
-    li.appendChild(p)
+    li.innerHTML = composeTemplate(block)
     accordionWrapper.appendChild(li)
   })
+  document.querySelectorAll('li h2').forEach(e => e.onclick = handleClick)
 }
 
 // we need this to avoid FOUC
 document.getElementById('container').style.display = 'block'
 
-oReq.addEventListener('load', reqListener)
-oReq.open('GET', CONTENT_URL)
-oReq.send()
+xhr.addEventListener('load', reqListener)
+xhr.open('GET', CONTENT_URL)
+xhr.send()
