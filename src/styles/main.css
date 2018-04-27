@@ -45,6 +45,8 @@ p {
   line-height: 23px;
   padding: 4%;
   margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
   position: relative;
   border: 1px solid rgb(235, 235, 235);
   transition: opacity 500ms linear;
