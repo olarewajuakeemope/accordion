@@ -40,15 +40,16 @@ h2:hover {
 }
 
 p {
-  display: none;
+  opacity: 0;
   color: rgb(143, 143, 143);
   font-size: 17px;
   font-weight: 200;
   line-height: 26px;
   padding: 5%;
   margin: 0;
-  border: 1px solid rgb(235, 235, 235);
   position: relative;
+  border: 1px solid rgb(235, 235, 235);
+  transition: opacity 500ms linear;
 }
 
 ul {
@@ -59,7 +60,7 @@ ul {
 
 ul li {
   margin-bottom: 1%;
-  max-height: 10em;
+  max-height: 6.7em;
   overflow: hidden;
   transition: all 500ms ease-in-out;
 }
@@ -68,13 +69,13 @@ ul li.selected {
   max-height: 50em;
 }
 
-ul li.selected h2 {
+li.selected h2 {
   background-color: rgb(104, 72, 180);
   border-bottom-color: rgb(76, 52, 131);
 }
 
-ul li.selected p {
-  display: block;
+li.selected p {
+  opacity: 1;
 }
 
 ul li:hover:not(.selected) {
