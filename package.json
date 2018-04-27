@@ -1,0 +1,54 @@
+{
+  "name": "accordion",
+  "version": "1.0.0",
+  "description": "A simple accordion using JS and CSS",
+  "main": "server.js",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "server": "webpack-dev-server --open --config webpack.dev.js",
+    "start": "babel-node server.js"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olarewajuakeemope/accordion.git"
+  },
+  "keywords": [
+    "accordion",
+    "js",
+    "css"
+  ],
+  "author": "Olarewaju Akeem Opeyemi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olarewajuakeemope/accordion/issues"
+  },
+  "homepage": "https://github.com/olarewajuakeemope/accordion#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.2",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "express": "^4.16.3",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.6.0",
+    "webpack-dev-middleware": "^3.1.3",
+    "webpack-dev-server": "^3.1.3",
+    "webpack-hot-middleware": "^2.22.1",
+    "webpack-merge": "^4.1.2"
+  }
+}
