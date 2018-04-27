@@ -56,14 +56,14 @@ ul {
   margin: 0;
 }
 
-ul li {
+li {
   margin-bottom: 1%;
   max-height: 6.7em;
   overflow: hidden;
   transition: all 500ms ease-in-out;
 }
 
-ul li.selected {
+li.selected {
   max-height: 50em;
 }
 
@@ -76,11 +76,16 @@ li.selected p {
   opacity: 1;
 }
 
-ul li:hover:not(.selected) {
+li.selected span {
+  transform-origin: 1px 8px;
+  transform: rotate(180deg);
+}
+
+li:hover:not(.selected) {
   transform: translateX(10px);
 }
 
-ul li span {
+span {
   position: absolute;
   margin-top: 2%;
   right: 5%;
@@ -88,8 +93,8 @@ ul li span {
   transition: all 250ms ease-in-out;
 }
 
-ul li span:before,
-ul li span:after {
+span:before,
+span:after {
   content: "";
   position: absolute;
   background-color: #fff;
@@ -97,17 +102,12 @@ ul li span:after {
   height: 16px;
 }
 
-ul li span:before {
+span:before {
   transform: translate(2px, 0) rotate(45deg);
 }
 
-ul li span:after {
+span:after {
   transform: translate(-7px, 0) rotate(-45deg);
-}
-
-ul li.selected span {
-  transform-origin: 1px 8px;
-  transform: rotate(180deg);
 }
 
 @media (max-width: 700px) {
