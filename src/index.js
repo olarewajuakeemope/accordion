@@ -36,7 +36,7 @@ const reqListener = e => {
   })
 }
 
-// this is to avoid FOUC
+// we need this to avoid FOUC
 document.getElementById('container').style.display = 'block'
 
 oReq.addEventListener('load', reqListener)

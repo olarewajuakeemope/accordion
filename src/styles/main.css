@@ -12,6 +12,15 @@ body {
   margin-left:-25%;
   margin-top:-25%;
   padding-top: 5%;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 700px) {
+  #container {
+    width: 80%;
+    height: 80%;
+    margin-left:-40%;
+    margin-top:-40%;
+  }
 }
 h2 {
   color: #fff;
@@ -32,11 +41,8 @@ h2:hover {
   background-color: rgb(130, 35, 147);
   border-bottom: 5px solid rgb(80, 16, 96);
 }
-li.selected h2 {
-  background-color: rgb(104, 72, 180);
-  border-bottom: 5px solid rgb(76, 52, 131);
-}
 p {
+  display: none;
   color: rgb(143, 143, 143);
   font-size: 17px;
   font-weight: 200;
@@ -55,10 +61,17 @@ ul li {
   margin-bottom: 1%;
   max-height: 6.5em;
   overflow: hidden;
-  transition: all 250ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 ul li.selected {
   max-height: 50em;
+}
+ul li.selected h2 {
+  background-color: rgb(104, 72, 180);
+  border-bottom: 5px solid rgb(76, 52, 131);
+}
+ul li.selected p {
+  display: block;
 }
 ul li:hover:not(.selected) {
   transform: translateX(10px);
