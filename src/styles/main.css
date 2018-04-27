@@ -6,12 +6,10 @@ body {
 
 #container {
   position:absolute;
-  left:50%;
-  top:50%;
   width: 50%;
   height: 50%;
-  margin-left:-25%;
-  margin-top:-25%;
+  margin-left:25%;
+  margin-right:auto;
   padding-top: 5%;
   transition: all 500ms ease-in-out;
 }
@@ -116,7 +114,6 @@ ul li.selected span {
   #container {
     width: 80%;
     height: 80%;
-    margin-left:-40%;
-    margin-top:-40%;
+    margin-left:10%;
   }
 }
