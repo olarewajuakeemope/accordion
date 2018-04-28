@@ -3,7 +3,7 @@ import './styles/main.css'
 const CONTENT_URL = 'http://design.propcom.co.uk/buildtest/accordion-data.json'
 const xhr = new XMLHttpRequest()
 
-const clearAllSelected = () => {
+const clearSelected = () => {
   const selected = document.querySelector('.selected')
   if (selected) {
     selected.classList.remove('selected')
@@ -11,12 +11,12 @@ const clearAllSelected = () => {
 }
 
 const handleClick = e => {
-  const accordion = e.target.parentNode
-  if (accordion.classList.contains('selected')) {
-    accordion.classList.remove('selected')
+  const listEl = e.target.parentNode
+  if (listEl.classList.contains('selected')) {
+    listEl.classList.remove('selected')
   } else {
-    clearAllSelected()
-    accordion.classList.add('selected')
+    clearSelected()
+    listEl.classList.add('selected')
   }
 }
 
@@ -33,9 +33,9 @@ const reqListener = e => {
   const res = JSON.parse(e.target.response)
 
   res.blocks.forEach(block => {
-    const li = document.createElement('li')
-    li.innerHTML = composeTemplate(block)
-    accordionWrapper.appendChild(li)
+    const listEl = document.createElement('li')
+    listEl.innerHTML = composeTemplate(block)
+    accordionWrapper.appendChild(listEl)
   })
   document.querySelectorAll('li h2').forEach(e => e.onclick = handleClick)
 }
