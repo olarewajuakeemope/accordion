@@ -11,7 +11,6 @@ body {
   margin-left:25%;
   margin-right:auto;
   padding-top: 5%;
-  transition: all 500ms ease-in-out;
 }
 
 h2 {
@@ -27,9 +26,7 @@ h2 {
   height: 2.5em;
   cursor: pointer;
   background-color: rgb(157, 62, 174);
-  border-bottom-width: 5px;
-  border-bottom-style: solid;
-  border-bottom-color: rgb(110, 43, 123);
+  border-bottom: 5px solid rgb(110, 43, 123);
 }
 
 h2:hover {
@@ -92,7 +89,6 @@ span {
   margin-top: 2%;
   right: 5%;
   z-index: 2;
-  transition: all 250ms ease-in-out;
 }
 
 span:before,
@@ -110,6 +106,10 @@ span:before {
 
 span:after {
   transform: translate(-7px, 0) rotate(-45deg);
+}
+
+#container, li, span {
+  transition: all 500ms ease-in-out;
 }
 
 @media (max-width: 700px) {

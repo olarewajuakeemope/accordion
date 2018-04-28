@@ -4,7 +4,7 @@ const CONTENT_URL = 'http://design.propcom.co.uk/buildtest/accordion-data.json'
 const xhr = new XMLHttpRequest()
 
 const clearSelected = () => {
-  const selected = document.querySelector('.selected')
+  const selected = document.querySelector('li.selected')
   if (selected) {
     selected.classList.remove('selected')
   }
@@ -35,9 +35,9 @@ const reqListener = e => {
   res.blocks.forEach(block => {
     const listEl = document.createElement('li')
     listEl.innerHTML = composeTemplate(block)
+    listEl.querySelector('h2').onclick = handleClick
     accordionWrapper.appendChild(listEl)
   })
-  document.querySelectorAll('li h2').forEach(e => e.onclick = handleClick)
 }
 
 // we need this to avoid FOUC
