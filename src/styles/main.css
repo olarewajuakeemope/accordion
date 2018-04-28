@@ -37,15 +37,15 @@ h2:hover {
 p {
   opacity: 0;
   color: rgb(143, 143, 143);
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 19px;
+  font-weight: 350;
   line-height: 23px;
   padding: 4%;
   margin: 0;
+  position: relative;
   text-align: justify;
   text-justify: inter-word;
-  position: relative;
-  border: 1px solid rgb(235, 235, 235);
+  border: 2px solid rgb(235, 235, 235);
   transition: opacity 500ms linear;
 }
 
@@ -56,10 +56,9 @@ ul {
 }
 
 li {
-  margin-bottom: 1%;
+  margin-bottom: .5%;
   max-height: 6.7em;
   overflow: hidden;
-  transition: all 500ms ease-in-out;
 }
 
 li.selected {
@@ -96,6 +95,7 @@ span:after {
   content: "";
   position: absolute;
   background-color: #fff;
+  border-radius: 30% 30% 0 0;
   width: 3px;
   height: 16px;
 }
@@ -117,5 +117,9 @@ span:after {
     width: 80%;
     height: 80%;
     margin-left:10%;
+  }
+
+  li {
+    max-height: 6.1em;
   }
 }
